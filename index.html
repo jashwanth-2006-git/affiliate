@@ -3,62 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affiliate Marketing - Coming Soon</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Coming Soon</title>
+	<style>
+		html, body { height: 100%; }
+		body {
+			margin: 0;
+			display: grid;
+			place-items: center;
+			background: #0b1220;
+			color: #e5e7eb;
+			font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+		}
+
+		.hero {
+			position: relative;
+			padding: 64px 32px;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: clamp(2.75rem, 9vw, 6.5rem);
+			line-height: 1.05;
+			margin: 0 0 18px 0;
+			font-weight: 900;
+			letter-spacing: 0.01em;
+			color: #ffffff;
+			text-transform: uppercase;
+			/* animations */
+			animation: fadeUp 700ms ease-out both, glow 3s ease-in-out infinite 600ms;
+		}
+
+		/* Red underline bar */
+		.bar {
+			margin: 0 auto;
+			width: clamp(140px, 32vw, 360px);
+			height: 4px;
+			background: #ef4444;
+			border-radius: 999px;
+			box-shadow: 0 4px 18px rgba(239, 68, 68, 0.25);
+			transform-origin: center;
+			animation: breathe 2.8s ease-in-out infinite;
+		}
+
+		/* Stay Tuned */
+		h2 {
+			margin: 18px 0 0 0;
+			font-size: clamp(1.1rem, 3.5vw, 1.75rem);
+			font-weight: 600;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: #cbd5e1;
+			animation: fadeUp 700ms ease-out 120ms both;
+		}
+
+		.dots {
+			display: inline-block;
+			margin-left: 6px;
+		}
+		.dots span {
+			display: inline-block;
+			width: 0.4em;
+			text-align: center;
+			color: #ef4444;
+			animation: bounce 1.6s ease-in-out infinite;
+		}
+		.dots span:nth-child(2) { animation-delay: 0.2s; }
+		.dots span:nth-child(3) { animation-delay: 0.4s; }
+
+		@keyframes fadeUp {
+			from { opacity: 0; transform: translateY(14px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+
+		@keyframes glow {
+			0%, 100% { text-shadow: 0 0 0 rgba(239, 68, 68, 0); }
+			50% { text-shadow: 0 0 22px rgba(239, 68, 68, 0.35); }
+		}
+
+		@keyframes breathe {
+			0%, 100% { transform: scaleX(0.85); opacity: 0.9; }
+			50% { transform: scaleX(1); opacity: 1; }
+		}
+
+		@keyframes bounce {
+			0%, 80%, 100% { transform: translateY(0); opacity: 0.6; }
+			40% { transform: translateY(-6px); opacity: 1; }
+		}
+	</style>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <div class="logo">
-                <h1>AffiliatePro</h1>
-            </div>
-            
-            <div class="main-content">
-                <h2>Something Amazing is Coming</h2>
-                <p>We're working hard to bring you the best affiliate marketing platform. Get ready to maximize your earnings and grow your business with our innovative tools and strategies.</p>
-                
-                <div class="features">
-                    <div class="feature">
-                        <h3>💰 High Commissions</h3>
-                        <p>Earn up to 50% commission on every sale</p>
-                    </div>
-                    <div class="feature">
-                        <h3>📊 Advanced Analytics</h3>
-                        <p>Track your performance with detailed insights</p>
-                    </div>
-                    <div class="feature">
-                        <h3>🚀 Marketing Tools</h3>
-                        <p>Access professional marketing materials</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="email-signup">
-                <h3>Be the First to Know</h3>
-                <p>Get notified when we launch and receive exclusive early access</p>
-                <form id="emailForm">
-                    <input type="email" id="emailInput" placeholder="Enter your email address" required>
-                    <button type="submit">Notify Me</button>
-                </form>
-                <div id="message"></div>
-            </div>
-            
-            <div class="social-links">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#" class="social-link">Facebook</a>
-                    <a href="#" class="social-link">Twitter</a>
-                    <a href="#" class="social-link">LinkedIn</a>
-                    <a href="#" class="social-link">Instagram</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>&copy; 2024 AffiliatePro. All rights reserved.</p>
-        </div>
-    </div>
-    
-    <script src="script.js"></script>
+	<div class="hero">
+		<h1>Coming Soon</h1>
+		<div class="bar"></div>
+		<h2>Stay Tuned<span class="dots"><span>.</span><span>.</span><span>.</span></span></h2>
+	</div>
 </body>
 </html>
